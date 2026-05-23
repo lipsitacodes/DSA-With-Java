@@ -12,12 +12,12 @@ public class scope {
             System.out.println("Inside the block value a:" + t);
         }
         System.out.println("Outside the block value a:" + a);
-        //System.out.println(t); cannot be print because t is not             declared in side the blocl
+        //System.out.println(t); cannot be print because t is not declared in side the block
         //System.out.println(num);
     }
 
     static void random() {
         int num = 12;
-        //this is called function scope you can acess the variable only inside the functions only not out side of function
+        //this is called function scope you can access the variable only inside the functions only not out side of function
     }
 }

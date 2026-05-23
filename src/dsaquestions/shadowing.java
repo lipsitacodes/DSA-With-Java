@@ -5,7 +5,7 @@ public class shadowing {
 
     public static void main(String[] args) {
         int x;
-        x = 12;//the class variale at line 4 is shadowed by this
+        x = 12;//the class variable at line 4 is shadowed by this
         System.out.println("x inside the main function " + x); //12
         fun();//133
     }
