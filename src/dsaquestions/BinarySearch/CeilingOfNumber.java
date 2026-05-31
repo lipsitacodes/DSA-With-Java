@@ -1,6 +1,7 @@
 package dsaquestions.BinarySearch;
 
 import java.util.Scanner;
+
 //find the smallest number which is greater than equal to the target number smallest upper bound
 public class CeilingOfNumber {
     public static void main(String[] args) {
@@ -21,7 +22,7 @@ public class CeilingOfNumber {
     static int BSC(int[] a, int t) {
         int l = 0, h = a.length - 1;
         int mid;
-        if(t > a[h]){
+        if (t > a[h]) {
             return -1;
         }
         while (l <= h) {

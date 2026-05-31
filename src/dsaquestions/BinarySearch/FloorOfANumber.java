@@ -18,10 +18,11 @@ public class FloorOfANumber {
         int c = BSC(a, t);
         System.out.println("Floor Number of " + t + " is : " + c);
     }
+
     static int BSC(int[] a, int t) {
         int l = 0, h = a.length - 1;
         int mid;
-        if(t < a[l]){
+        if (t < a[l]) {
             return -1;
         }
         while (l <= h) {
