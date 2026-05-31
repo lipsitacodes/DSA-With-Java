@@ -20,7 +20,10 @@ public class FloorOfANumber {
     }
     static int BSC(int[] a, int t) {
         int l = 0, h = a.length - 1;
-        int mid, c;
+        int mid;
+        if(t < a[l]){
+            return -1;
+        }
         while (l <= h) {
             mid = l + (h - l) / 2;
             if (a[mid] == t) {
