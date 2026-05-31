@@ -1,6 +1,7 @@
 package dsaquestions.BinarySearch;
 
 import java.util.Scanner;
+
 //find the largest number which is smaller than or equal to the target number largest lower bound
 public class FloorOfANumber {
     public static void main(String[] args) {
@@ -17,7 +18,6 @@ public class FloorOfANumber {
         int c = BSC(a, t);
         System.out.println("Floor Number of " + t + " is : " + c);
     }
-
     static int BSC(int[] a, int t) {
         int l = 0, h = a.length - 1;
         int mid, c;
@@ -34,15 +34,16 @@ public class FloorOfANumber {
         }
         return a[h];
     }
-    }
-
-//[12,23,24,56,75,77,78,89]
-// 0  1  2  3  4  5  6  7
-// now her our target is basically target = 45 l = 0 , h = 7 , m = 3
-// 45 <= 56[mid]
-//l = 0,h = mid - 1 = 3-1 = 2
-//[12,23,24] m = 1
-// 0  1  2
-//23 < = 43 l = m+1 = 2, h = 2
-// [24] index = 2 , l = 2, h = 2 is our target element is smaller or greater than the mid value
-// 45 >= 24 l = mid+1 = 2+1 = 3 ...this is the condition where our while loop exits and return the h over
+}
+/*
+[12,23,24,56,75,77,78,89]
+ 0  1  2  3  4  5  6  7
+ now her our target is basically target = 45 l = 0 , h = 7 , m = 3
+ 45 <= 56[mid]
+l = 0,h = mid - 1 = 3-1 = 2
+[12,23,24] m = 1
+ 0  1  2
+23 < = 43 l = m+1 = 2, h = 2
+ [24] index = 2 , l = 2, h = 2 is our target element is smaller or greater than the mid value
+ 45 >= 24 l = mid+1 = 2+1 = 3 ...this is the condition where our while loop exits and return the h over
+ */
