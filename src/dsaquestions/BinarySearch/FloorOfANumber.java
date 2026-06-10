@@ -36,7 +36,8 @@ public class FloorOfANumber {
                 h = mid - 1;
             }
         }
-        return a[h];
+        int ans = a[h];
+        return ans;
     }
 }
 /*

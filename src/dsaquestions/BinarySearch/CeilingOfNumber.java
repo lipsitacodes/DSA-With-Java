@@ -35,7 +35,7 @@ public class CeilingOfNumber {
             } else {
                 h = mid - 1;
             }
-        }
-        return a[l];
+        } int ans = a[l];
+        return ans;
     }
 }
