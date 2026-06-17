@@ -7,17 +7,20 @@ import java.util.Arrays;
 public class First_Last_Element {
     public static void main(String[] args) {
         int[] arr = {3, 7, 7, 7, 7, 8, 8, 10};
-        int t = 2;
+        int t = 7;
         System.out.println(Arrays.toString(fle(arr, t)));
     }
+
     static int[] fle(int[] nums, int target) {
         int[] ans = {-1, -1};
         //Check for first occurrence if target first
-        int start = search(nums, target, true);
-        int end = search(nums, target, false);
-        ans[0] = start;
-        ans[1] = end;
-        return ans;
+        ans[0] = search(nums, target, true);
+        if (ans[0] != -1) {
+            ans[1] = search(nums, target, false);
+        }
+//        ans[0] = start;
+//        ans[1] = end;
+         return ans;
     }
     static int search(int[] nums, int target, boolean findstartindex) {
         int ans = -1;
