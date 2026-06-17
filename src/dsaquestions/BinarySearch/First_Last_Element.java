@@ -1,14 +1,13 @@
 package dsaquestions.BinarySearch;
 
 
-import java.util.Arrays;
 //this function just returns the index value of target
 
 public class First_Last_Element {
     public static void main(String[] args) {
         int[] arr = {3, 7, 7, 7, 7, 8, 8, 10};
         int t = 7;
-        System.out.println(Arrays.toString(fle(arr, t)));
+        System.out.println(fle(arr, t));
     }
 
     static int[] fle(int[] nums, int target) {
