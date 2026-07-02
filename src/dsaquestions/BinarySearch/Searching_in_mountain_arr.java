@@ -1,11 +1,46 @@
 package dsaquestions.BinarySearch;
-public class peak_in_mountain_arr {
-    public static void main(String[] args) {
-        int[] arr = {0, 1, 4, 5, 7, 6, 5, 3, 2, 1, 0};
-        System.out.println(search(arr));
-    }
 
-    static int search(int[] arr) {
+public class Searching_in_mountain_arr {
+    public static void main(String[] args) {
+        int[] arr = {0, 1, 3, 5, 7, 6, 5, 3, 2, 1, 0};
+        System.out.println(search(arr, 3));
+    }
+    static int search(int[] arr, int t) {
+        int peak = peakIndexInMountainArray(arr);
+        int firstTry = BS(arr, t, 0, peak);
+        if (firstTry != -1) {
+            return firstTry;
+        } else {
+            return OBS(arr, t, peak + 1, arr.length - 1);
+        }
+    }
+    static int BS(int[] arr, int t, int l, int h) {
+        while (l <= h) {
+            int mid = l + (h - l) / 2;
+            if (arr[mid] == t) {
+                return mid;
+            } else if (arr[mid] < t) {
+                l = mid + 1;
+            } else {
+                h = mid - 1;
+            }
+        }
+        return -1;
+    }
+    static int OBS(int[] arr, int t, int l, int h) {
+        while (l <= h) {
+            int mid = l + (h - l) / 2;
+            if (arr[mid] == t) {
+                return mid;
+            } else if (arr[mid] < t) {
+                l = mid + 1;
+            } else {
+                h = mid - 1;
+            }
+        }
+        return -1;
+    }
+    static int peakIndexInMountainArray(int[] arr) {
         int l = 0;
         int h = arr.length - 1;
         while (l < h) {
