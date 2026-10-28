@@ -10,11 +10,20 @@ public class Armstrong {
         int a = sc.nextInt();
 
         int r = a;
-        int res = 0;
-
+        double res = 0;
+        int length = 0;
+        if (r == 0) {
+            length = 1;
+        } else {
+            while (r != 0) {
+                r /= 10;
+                length++;
+            }
+        }
+        r = a;
         while (a != 0) {
             int rem = a % 10;
-            res = res + rem * rem * rem;
+            res = res + Math.pow(rem,length);
             a = a / 10;
         }
 

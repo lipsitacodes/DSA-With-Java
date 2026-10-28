@@ -8,7 +8,7 @@ public class string {
         System.out.println(name);
 
         String a = "Lipsita";
-        String b = "Lipsita";
+        String b =  "Lipsita";
         System.out.println(a);
         a = "Khadgarai";
         System.out.println(a);
